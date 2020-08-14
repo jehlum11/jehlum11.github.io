@@ -26,6 +26,14 @@ My ultimate goal is to contribute to the development of systems capable of under
   <a href="https://orcid.org/0000-0003-2636-0066">ORCID</a>
 </p>
 
+
+### Experience
+{% for exp in site.data.experience limit:3 %}
+Start Date: {{exp.start_date}} - End Date: {{exp.end_date}}<br>
+{{exp.description}}
+<a href="{{ site.url }}{{ site.baseurl }}/{{exp.permalink}}.html">See More!</a>
+{% endfor %}
+
 ### News
 {% for article in site.data.news limit:5 %}
 {{ article.date }} :
